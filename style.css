@@ -1,0 +1,858 @@
+/*
+
+Project: PersoCV - Personal CV/Portfolio HTML Template
+Version: 1.0
+Author : anamulhaquemohan
+
+NOTE:
+------
+PLEASE DO NOT EDIT THIS CSS, YOU MAY NEED TO USE "custom.css" FILE FOR WRITING YOUR CUSTOM CSS.
+WE MAY RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE. IT'S BETTER AND SAFER TO USE "custom.css".
+
+[TABLE OF CONTENTS]
+
+1. GENERAL STYLES
+    1.1. WRAPPER
+    1.2. SECTION TITLE
+    1.3. BACKGROUND COLOR
+    1.4. BACKGROUND IMAGE
+    1.5. BACKGROUND OVERLAY
+    1.6. BORDERS
+    1.7. BUTTONS
+
+2. BANNER AREA
+    2.1. BANNER CONTENT
+
+3. MENU AREA
+    3.1. NAVBAR
+    3.2. NAVBAR TOGGLE
+    3.3. LOGO
+    3.4. NAV
+
+4. ABOUT AREA
+    4.1. ABOUT IMAGE
+    4.2. ABOUT SOCIAL
+    4.3. ABOUT CONTENT
+    4.4. ABOUT ACTION
+
+5. SERVICES AREA
+    5.1. SERVICE TITLE
+    5.2. SERVICE TITLE
+
+6. SKILLS AREA
+    6.1. SKILL ITEM
+    6.2. SKILL CHART
+    6.3. SKILL CONTENT
+
+7. COUNTER AREA
+
+9. BLOG AREA
+    9.1. POST ITEM
+
+10. CONTACT AREA
+    10.1. CONTACT FORM
+    10.2. CONTACT ADDRESS
+    10.3. CONTACT MAP
+
+11. FOOTER AREA
+    11.1. FOOTER COPYRIGHT
+
+12. HELPER CLASSES
+    12.1. RESET GUTTER
+    12.2. VERTICAL CENTER
+
+13. MEDIA QUERIES
+    13.1. DESKTOP
+    13.2. DESKTOP SMALL
+    13.3. TABLET
+    13.4. MOBILE
+
+*/
+
+/*------------------------------------*\
+    1. GENERAL STYLES
+\*------------------------------------*/
+html, body {
+    height: 100%;
+}
+
+body {
+    color: #737373;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+a {
+    color: #737373;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    outline: 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* 1.1. WRAPPER */
+.wrapper {
+    height: 100%;
+}
+
+/* 1.2. SECTION TITLE */
+.section--title h2 {
+    position: relative;
+    margin: -6px 0 60px;
+    padding-bottom: 11px;
+    color: #303030;
+    font-size: 34px;
+    line-height: 38px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.section--title h2:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #303030;
+}
+
+/* 1.3. BACKGROUND COLOR */
+.bg--whitesmoke {
+    background-color: #fafafa;
+}
+
+/* 1.4. BACKGROUND IMAGE */
+.bg--img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 1.5. BACKGROUND OVERLAY */
+.bg--overlay {
+    position: relative;
+    z-index: 0;
+}
+
+.bg--overlay:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #303030;
+    opacity: 0.6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    z-index: -1;
+}
+
+/* 1.6. BORDERS */
+.bd--top-bottom {
+    border-style: solid;
+    border-width: 1px 0;
+    border-color: #e9e9e9;
+}
+
+/* 1.7. BUTTONS */
+.btn {
+    padding: 10px 20px;
+    border-radius: 0;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    -webkit-transition: color .25s ease, background-color .25s ease-in-out;
+            transition: color .25s ease, background-color .25s ease-in-out;
+    text-transform: uppercase;
+}
+
+.btn:hover,
+.btn:focus {
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active:focus {
+    outline: 0;
+}
+
+.btn--default,
+.btn--default:focus {
+    color: #303030;
+    border-color: #303030;
+    background-color: transparent;
+}
+
+.btn--default:hover {
+    color: #fff;
+    background-color: #303030;
+}
+
+.btn--primary,
+.btn--primary:focus {
+    color: white;
+    background-color: #303030;
+    border-color: #303030;
+}
+
+.btn--primary:hover {
+    color: #303030;
+    background-color: transparent;
+}
+
+/*------------------------------------*\
+    2. BANNER AREA
+\*------------------------------------*/
+.banner {
+    position: relative;
+    height: 100%;
+    background-position: center top;
+    z-index: 0;
+}
+
+.banner:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    z-index: -1;
+}
+
+/* 2.1. BANNER CONTENT */
+.banner--content {
+    color: #fff;
+    padding-top: 180px;
+    /* padding-bottom: 80px; */
+}
+
+.banner--content h1 {
+    margin: 0 0 12px;
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: -2px;
+}
+
+.banner--content p {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.banner--content .btn--groups {
+    font-size: 0;
+    line-height: 0;
+}
+
+.banner--content .btn--default {
+    margin-top: 15px;
+    color: #fffff1;
+    border-color: #fffff1;
+    background-color: transparent;
+}
+
+.banner--content .btn--default + .btn--default {
+    margin-left: 30px;
+}
+
+.banner--content .btn--default .fa {
+    margin-right: 8px;
+}
+
+/* X.X. BACKGROUND COLORS */
+.st--bg-primary {
+    color: #fff;
+    background-color: #ff5252;
+}
+
+.st--bg-primary-before:before,
+.st--bg-primary-before:after {
+    background-color: #ff5252;
+}
+
+.st--bg-dark {
+    color: #fff;
+    background-color: #303030;
+}
+
+.st--bg-primary-before:before,
+.st--bg-primary-before:after {
+    background-color: #303030;
+}
+
+/*------------------------------------*\
+    3. MENU AREA
+\*------------------------------------*/
+/* 3.1. NAVBAR */
+.menu .navbar {
+    margin-bottom: 0;
+    padding: 10px 0;
+    background-color: #fff;
+    border: 0;
+    border-radius: 0;
+    -webkit-transition: box-shadow .25s ease;
+            transition: box-shadow .25s ease;
+}
+
+.is-sticky .menu .navbar {
+    box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+
+/* 3.2. NAVBAR TOGGLE */
+.menu .navbar-toggle {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #303030;
+    border-color: #303030;
+    border-radius: 0;
+    -webkit-transition: background-color .25s ease-in-out;
+    transition: background-color .25s ease-in-out;
+}
+
+.menu .navbar-toggle.collapsed {
+    background-color: transparent;
+}
+
+.menu .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.menu .navbar-toggle.collapsed .icon-bar {
+    background-color: #303030;
+}
+
+/* 3.3. LOGO */
+.menu--logo {
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #303030;
+    font-weight: 600;
+}
+
+.menu--logo:hover,
+.menu--logo:focus {
+    color: #303030;
+}
+
+/* 3.4. NAV */
+.menu--nav .nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #303030;
+    font-weight: 600;
+    -webkit-transition: color .25s ease, background-color .25s ease-in-out;
+            transition: color .25s ease, background-color .25s ease-in-out;
+}
+
+.menu--nav .nav > li > a:hover,
+.menu--nav .nav > li > a:focus,
+.menu--nav .nav > li.active > a {
+    background-color: #fff;
+}
+
+.menu--nav .nav > li > a:before {
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #303030;
+    -webkit-transition: width .25s ease-in-out;
+    transition: width .25s ease-in-out;
+}
+
+.menu--nav .nav > li > a:hover:before,
+.menu--nav .nav > li.active > a:before {
+    width: 100%;
+}
+
+/*------------------------------------*\
+    4. ABOUT AREA
+\*------------------------------------*/
+.about {
+    padding: 80px 0;
+}
+
+/* 4.1. ABOUT IMAGE */
+.about--img {
+    max-width: 200px;
+    margin: 0 auto 30px;
+}
+
+/* 4.2. ABOUT SOCIAL */
+.about--social ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+}
+
+.about--social ul li {
+    display: inline-block;
+}
+
+.about--social ul li a {
+    display: block;
+    padding: 0 15px;
+    color: #303030;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+/* 4.3. ABOUT CONTENT */
+.about--content {
+    margin-top: 24px;
+    margin-bottom: 26px;
+}
+
+.about--content p {
+    margin-bottom: 20px;
+}
+
+.about--content p:last-child {
+    margin-bottom: 0;
+}
+
+/* 4.4. ABOUT ACTION */
+.about--action {
+    text-align: center;
+}
+
+.about--action .btn .fa {
+    margin-right: 8px;
+}
+
+/*------------------------------------*\
+    5. SERVICES AREA
+\*------------------------------------*/
+.services {
+    padding: 80px 0 20px;
+}
+
+/* X.X. SERVICE ITEM */
+.service--item {
+    margin-bottom: 56px;
+    color: #303030;
+}
+
+/* 5.1. SERVICE TITLE */
+.service--title {
+    font-size: 0;
+    line-height: 0;
+}
+
+.service--title .fas {
+    width: 40px;
+    margin-right: 15px;
+    padding: 18px 0;
+    font-size: 18px;
+    line-height: 0;
+    cursor: default;
+}
+
+.service--item:hover .service--title .fa {
+    color: #fff;
+    background-color: #303030;
+}
+
+.service--title h3 {
+    display: inline-block;
+    margin: 0;
+    font-size: 24px;
+    line-height: 28px;
+    vertical-align: middle;
+}
+
+/* 5.2. SERVICE TITLE */
+.service--content {
+    margin-top: 11px;
+}
+
+.service--content .read-more {
+    border-bottom: 1px dotted #737373;
+    -webkit-transition: border-color .25s;
+            transition: border-color .25s;
+}
+
+.service--content .read-more:hover,
+.service--content .read-more:focus {
+    color: #737373;
+    border-color: #303030;
+}
+
+/*------------------------------------*\
+    6. SKILLS AREA
+\*------------------------------------*/
+.skills {
+    padding: 80px 0 20px;
+}
+
+/* 6.1. SKILL ITEM */
+.skill--item {
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+.skill--item h3 {
+    margin: 0 0 11px;
+    color: #303030;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+/* 6.2. SKILL CHART */
+.skill--chart {
+    float: left;
+    position: relative;
+    min-width: 50px;
+    min-height: 50px;
+    margin: 10px 30px 10px 10px;
+    color: #303030;
+    font-size: 0;
+    line-height: 0;
+}
+
+.skill--chart:before {
+    content: " ";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.10);
+    z-index: -1;
+}
+
+.skill--chart span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/* 6.3. SKILL CONTENT */
+.skill--content {
+    text-align: left;
+    overflow: hidden;
+}
+
+/*------------------------------------*\
+    7. COUNTER AREA
+\*------------------------------------*/
+.counter {
+    padding: 75px 0 15px;
+}
+
+/* X.X. COUNTER ITEM */
+.counter--item {
+    margin-bottom: 60px;
+    color: #303030;
+    text-align: center;
+}
+
+.counter.bg--overlay .counter--item {
+    color: #fff;
+}
+
+/* X.X. COUNTER NUMBER */
+.counter--number {
+    margin-top: -3px;
+    margin-bottom: 19px;
+    font-size: 34px;
+    line-height: 38px;
+    font-weight: 700;
+}
+
+/* X.X. COUNTER TEXT */
+.counter--text {
+    position: relative;
+    padding-top: 18px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.counter--text:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 60px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #303030;
+}
+
+.counter.bg--overlay .counter--text:before {
+    background-color: #fff;
+}
+
+
+/*------------------------------------*\
+    9. CONTACT AREA
+\*------------------------------------*/
+.contact {
+    padding: 80px 0;
+}
+
+/* 9.1. CONTACT FORM */
+.contact--form-status .alert {
+    margin-bottom: 15px;
+    color: #303030;
+    background-color: transparent;
+    border-color: #303030;
+    border-radius: 0;
+}
+
+.contact--form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact--form label {
+    display: block;
+    margin: 6px 0 0;
+    color: #303030;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.contact--form .form-control {
+    height: auto;
+    padding: 10px 12px;
+    border-width: 0 0 1px;
+    border-color: #e9e9e9;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-transition: border-color .25s ease;
+            transition: border-color .25s ease;
+}
+
+.contact--form .form-control:focus {
+    border-color: #303030;
+}
+
+.contact--form textarea.form-control {
+    min-height: 127px;
+}
+
+.contact--form button[type="submit"] .fa {
+    margin-left: 10px;
+}
+
+/* 9.2. CONTACT ADDRESS */
+.contact--address p {
+    margin-bottom: 26px;
+}
+
+.contact--address p:last-child {
+    margin-bottom: 0;
+}
+
+.contact--address ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact--address ul li a:hover,
+.contact--address ul li a:focus {
+    color: inherit;
+}
+
+.contact--address ul li {
+    margin-bottom: 25px;
+}
+
+.contact--address ul li:last-child {
+    margin-bottom: 0;
+}
+
+.contact--address ul li .fas {
+    color: #303030;
+    font-size: 20px;
+    line-height: 28px;
+    vertical-align: middle;
+}
+
+.contact--address ul li .fa-mobile {
+    font-size: 28px;
+}
+
+.contact--address ul li .fa-map-marker {
+    font-size: 24px;
+}
+
+.contact--address ul li strong {
+    display: block;
+    margin-top: 6px;
+    color: #303030;
+    font-weight: 600;
+}
+
+/* 9.3. CONTACT MAP */
+#contactMap {
+    min-height: 260px;
+}
+
+/*------------------------------------*\
+    10. FOOTER AREA
+\*------------------------------------*/
+/* 10.1. FOOTER COPYRIGHT */
+.footer--copyright {
+    padding: 21px 0;
+    color: #fff;
+    background-color: #303030;
+    text-align: center;
+}
+
+.footer--copyright a {
+    color: #fff;
+    font-weight: 600;
+}
+
+/*------------------------------------*\
+    11. HELPER CLASSES
+\*------------------------------------*/
+/* 11.1. RESET GUTTER */
+.reset--gutter {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.reset--gutter > div {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* 11.2. VERTICAL CENTER */
+.vc--parent {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.vc--child {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*------------------------------------*\
+    12. MEDIA QUERIES
+\*------------------------------------*/
+/* 12.1. DESKTOP */
+@media screen and (max-width: 1199px) {
+
+}
+
+/* 12.2. DESKTOP SMALL */
+@media screen and (max-width: 991px) {
+    /* BANNER AREA */
+    .banner--content h1 {
+        margin-bottom: 20px;
+        font-size: 42px;
+    }
+
+    /* PORTFOLIO AREA */
+    .portfolio--modal-content {
+        max-height: none !important;
+        padding-left: 45px;
+        padding-right: 45px;
+        padding-bottom: 30px;
+    }
+
+    /* CONTACT AREA */
+    .contact--form.pull-right {
+        float: none !important;
+    }
+
+    .contact--address {
+        margin-top: 60px;
+    }
+}
+
+/* 12.3. TABLET */
+@media screen and (max-width: 767px) {
+    /* BANNER AREA */
+    .banner {
+        background-position: 80%;
+    }
+
+    .banner--content {
+        text-align: center;
+    }
+
+    .banner--content .btn--default {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .banner--content .btn--default + .btn--default {
+        margin-left: 15px;
+    }
+}
+
+/* 12.4. MOBILE */
+@media screen and (max-width: 480px) {
+    /* SERVICES AREA */
+    .service--item {
+        float: none;
+        width: 100%;
+    }
+
+    /* PORTFOLIO AREA */
+    .portfolio--item {
+        margin-bottom: 30px;
+        float: none;
+        width: 100%;
+    }
+
+    .portfolio--item:last-child {
+        margin-bottom: 0;
+    }
+
+    /* COUNTER AREA */
+    .counter--item {
+        float: none;
+        width: 100%;
+    }
+
+    #contactMap {
+        margin-top: 30px;
+    }
+
+    /* COL XXS */
+    .col-xxs-12 {
+        float: none;
+        width: 100%;
+    }
+}
